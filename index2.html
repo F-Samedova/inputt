@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        margin-bottom: 10px;
+        padding: 7px;
+    }
+
+    style table,
+    td {
+
+        width: 200px;
+        border-top: 1px solid gainsboro;
+    }
+</style>
+
+<body>
+
+    <input type="text" id="a" placeholder="Name"><br>
+    <input type="text" id="b" placeholder="Surname"><br>
+    <input type="email" id="c" placeholder="E-mail daxil et"><br>
+    <button id="btn-1">SUBMIT</button>
+    <button id="btn-2">RESET</button>
+    <table id="tab">
+        <tr>
+            <td>Adiniz</td>
+            <td>Soyadiniz</td>
+            <td>E-mailiniz</td>
+        </tr>
+
+    </table>
+    <script>
+        let a = document.getElementById("a")
+        let b = document.getElementById("b")
+        let c = document.getElementById("c")
+        let btn1 = document.getElementById("btn-1")
+        let btn2 = document.getElementById("btn-2")
+        let tab = document.getElementById("tab")
+
+        btn1.addEventListener("click", () => {
+            // let btnn = `<button>temizle</button>`
+            tab.innerHTML += `<tr>
+                 <td>${a.value}</td>
+                 <td>${b.value}</td>
+                 <td>${c.value}</td>
+                 </tr>`;
+
+            // a.value = ""
+            // b.value = ""
+            // c.value = ""
+            if(a.value==""||b.value==""||c.value==""){
+                alert("xana bos")
+            }
+            btn2.addEventListener("click",()=>{
+                a.value = ""
+            b.value = ""
+            c.value = ""
+
+            })
+            
+            a.value = ""
+            b.value = ""
+            c.value = ""
+
+            
+
+
+
+
+
+
+
+
+
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,
+    tr,
+    td {
+        border: 1px solid red;
+        width: 20%;
+        height: 50px;
+    }
+</style>
+<input type="text" placeholder="name" id="a">
+<input type="text" placeholder="surname" id="b">
+<input type="email" placeholder="email" id="c">
+<button id="btn">click</button>
+
+<body>
+    <table id="tab"></table>
+    <p id="demo"></p>
+    <script>
+        const tab = document.getElementById("tab")
+        const demo = document.getElementById("demo")
+        const a = document.getElementById("a")
+        const b = document.getElementById("b")
+        const c = document.getElementById("c")
+        const btn = document.getElementById("btn")
+
+        let kod = ""
+        kod += "<tr>" + "<td></td>" + "<td></td>" + "<td></td>"
+        "</tr>"
+        kod += "<tr>" + "<td></td>" + "<td></td>" + "<td></td>"
+        "</tr>"
+        tab.innerHTML = kod
+        btn.addEventListener("click", () => {
+            let kod = ""
+            kod += "<tr>" + `<td>${a.value}</td>` + `<td>${b.value}</td>` + `<td>${c.value}</td>`
+            "</tr>"
+            kod += "<tr>" + "<td></td>" + "<td></td>" + "<td></td>"
+            "</tr>"
+            tab.innerHTML = kod
+        })
+
+    </script>
+
+</body>
+
+</html>
